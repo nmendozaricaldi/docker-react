@@ -6,4 +6,4 @@ before_install:
   - docker build -t nmendoza/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run nmendoza/docker-react npm run test -- --coverage
+  - docker run -e CI=true nmendoza/docker-react npm run test -- --coverage
